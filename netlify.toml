@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  command = "npm start"
+  port = 8888
+  functionsPort = 8889
+
+[experimental]
+  edge_functions=false
+
+[build.environment]
+  NETLIFY_EDGE_FUNCTIONS_ENABLED = "false"
